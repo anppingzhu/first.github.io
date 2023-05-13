@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>three</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/maps/china.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/visual.css">
+
+    <style>
+        .t_title {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 2.5em;
+            line-height: 80px;
+            color: #fff;
+        }
+
+        #chart_map {
+            cursor: pointer;
+        }
+
+        .t_show {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 2px;
+            background: #2C58A6;
+            padding: 2px 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--header-->
+
+
+    <!--main-->
+    <div class="data_content" style="margin-left: 0.2%;">
+
+
+        <div class="data_main">
+            <div class="main_left fl">
+                <div class="left_1 " style="cursor: pointer;">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        2020-2045年碳排放趋势
+                    </div>
+                    <div id="line0" class="chart" style="width:510px;height: 300px;display: block;margin-left: 0%"></div>
+                    <div id="line1" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line2" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line3" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line4" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line5" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line6" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line7" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line8" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line9" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line10" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line11" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line12" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line13" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line14" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line15" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line16" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line17" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line18" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line19" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line20" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line21" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line22" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line23" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line24" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line25" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line26" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line27" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line28" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <div id="line29" class="chart" style="width:510px;height: 300px;display: none;margin-left: 0%"></div>
+                    <h1 id="line30" style="display: none; text-align: center;line-height: 260px;color: #ffffff;">暂无数据</h1>
+                    <h1 id="line31" style="display: none; text-align: center;line-height: 260px;color: #ffffff;">暂无数据</h1>
+
+
+                </div>
+                <div class="left_2" style="cursor: pointer;">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div id="0" class="main_title" style="display: block;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        北京市·岭系数正则化函数
+                    </div>
+                    <!--                <div id="line" class="chart" style="width:100%;height: 300px;margin-left: 40px;"></div>-->
+                    <div id="1" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        天津市·岭系数正则化函数
+                    </div>
+                    <div id="2" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        河北省·岭系数正则化函数
+                    </div>
+                    <div id="3" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        山西省·岭系数正则化函数
+                    </div>
+                    <div id="4" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        内蒙古自治区·岭系数正则化函数
+                    </div>
+                    <div id="5" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        辽宁省·岭系数正则化函数
+                    </div>
+                    <div id="6" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        吉林省·岭系数正则化函数
+                    </div>
+                    <div id="7" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        黑龙江省·岭系数正则化函数
+                    </div>
+                    <div id="8" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        上海市·岭系数正则化函数
+                    </div>
+                    <div id="9" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        江苏省·岭系数正则化函数
+                    </div>
+                    <div id="10" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        浙江省·岭系数正则化函数
+                    </div>
+                    <div id="11" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        安徽省·岭系数正则化函数
+                    </div>
+                    <div id="12" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        福建省·岭系数正则化函数
+                    </div>
+                    <div id="13" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        江西省·岭系数正则化函数
+                    </div>
+                    <div id="14" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        山东省·岭系数正则化函数
+                    </div>
+                    <div id="15" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        河南省·岭系数正则化函数
+                    </div>
+                    <div id="16" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        湖北省·岭系数正则化函数
+                    </div>
+                    <div id="17" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        湖南省·岭系数正则化函数
+                    </div>
+                    <div id="18" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        广东省·岭系数正则化函数
+                    </div>
+                    <div id="19" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        广西壮族自治区·岭系数正则化函数
+                    </div>
+                    <div id="20" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        海南省·岭系数正则化函数
+                    </div>
+                    <div id="21" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        重庆市·岭系数正则化函数
+                    </div>
+                    <div id="22" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        四川省·岭系数正则化函数
+                    </div>
+                    <div id="23" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        贵州省·岭系数正则化函数
+                    </div>
+                    <div id="24" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        云南省·岭系数正则化函数
+                    </div>
+                    <div id="25" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        陕西省·岭系数正则化函数
+                    </div>
+                    <div id="26" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        甘肃省·岭系数正则化函数
+                    </div>
+                    <div id="27" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        青海省·岭系数正则化函数
+                    </div>
+                    <div id="28" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        宁夏回族自治区·岭系数正则化函数
+                    </div>
+                    <div id="29" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        新疆维吾尔自治区·岭系数正则化函数
+                    </div>
+                    <div id="30" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        西藏自治区·岭系数正则化函数
+                    </div>
+                    <div id="31" class="main_title" style="display: none;">
+                        <!-- <img src="img/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        台湾省·岭系数正则化函数
+                    </div>
+                    <!-- <div  class="echart t_btn7" style="width:100%;height: 280px;"></div> -->
+                    <img id="p0" src="Figure_0.png" style="width:100%;height: 285px; display: block;">
+                    <img id="p1" src="images/Figure_1.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p2" src="images/Figure_2.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p3" src="images/Figure_3.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p4" src="images/Figure_4.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p5" src="images/Figure_5.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p6" src="images/Figure_6.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p7" src="images/Figure_7.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p8" src="images/Figure_8.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p9" src="images/Figure_9.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p10" src="images/Figure_10.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p11" src="images/Figure_11.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p12" src="images/Figure_12.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p13" src="images/Figure_13.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p14" src="images/Figure_14.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p15" src="images/Figure_15.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p16" src="images/Figure_16.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p17" src="images/Figure_17.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p18" src="images/Figure_18.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p19" src="images/Figure_19.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p20" src="images/Figure_20.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p21" src="images/Figure_21.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p22" src="images/Figure_22.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p23" src="images/Figure_23.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p24" src="images/Figure_24.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p26" src="images/Figure_26.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p27" src="images/Figure_27.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p28" src="images/Figure_28.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p29" src="images/Figure_29.png" style="width:100%;height: 280px; display: none;">
+                    <img id="p30" src="images/Figure_30.png" style="width:100%;height: 280px; display: none;">
+                    <h1 id="p31" style="display: none; text-align: center;line-height: 260px;color: #ffffff;">暂无数据</h1>
+                    <h1 id="p32" style="display: none; text-align: center;line-height: 260px;color: #ffffff;">暂无数据</h1>
+
+
+                </div>
+            </div>
+            <div class="main_center fl">
+                <div class="center_text">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        <!-- <img src="img/t_3.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        全国各省碳达峰预测排放值
+                    </div>
+                    <div id="map" style="width:100%;height:95%;"></div>
+                </div>
+            </div>
+            <div class="main_right fl">
+                <div class="right_1">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div id="t0" class="main_title" style="display: block;">
+                            北京市
+                    </div>
+                                        <div id="t1" class="main_title" style="display: none;">
+                            天津市
+                    </div>
+                                        <div id="t2" class="main_title" style="display: none;">
+                            河北省
+                    </div>
+                                        <div id="t3" class="main_title" style="display: none;">
+                            山西省
+                    </div>
+                                        <div id="t4" class="main_title" style="display: none;">
+                            内蒙古自治区
+                    </div>
+                                        <div id="t5" class="main_title" style="display: none;">
+                            辽宁省
+                    </div>
+                                        <div id="t6" class="main_title" style="display: none;">
+                            吉林省
+                    </div>
+                                        <div id="t7" class="main_title" style="display: none;">
+                            黑龙江省
+                    </div>
+                                        <div id="t8" class="main_title" style="display: none;">
+                            上海市
+                    </div>
+                                        <div id="t9" class="main_title" style="display: none;">
+                            浙江省
+                    </div>
+                                       <div id="t10" class="main_title" style="display: none;">
+                            江苏省
+                    </div>
+                                        <div id="t11" class="main_title" style="display: none;">
+                            安徽省
+                    </div>
+                                        <div id="t12" class="main_title" style="display: none;">
+                            福建省
+                    </div>
+                                        <div id="t13" class="main_title" style="display: none;">
+                            江西省
+                    </div>
+                                        <div id="t14" class="main_title" style="display: none;">
+                            山东省
+                    </div>
+                                        <div id="t15" class="main_title" style="display: none;">
+                            河南省
+                    </div>
+                                        <div id="t16" class="main_title" style="display: none;">
+                            湖北省
+                    </div>
+                                        <div id="t17" class="main_title" style="display: none;">
+                            湖南省
+                    </div>
+                                        <div id="t18" class="main_title" style="display: none;">
+                            广东省
+                    </div>
+                                        <div id="t19" class="main_title" style="display: none;">
+                            广西壮族自治区
+                    </div>
+                                        <div id="t20" class="main_title" style="display: none;">
+                            海南省
+                    </div>
+                                        <div id="t21" class="main_title" style="display: none;">
+                            重庆市
+                    </div>
+                                        <div id="t22" class="main_title" style="display: none;">
+                            四川省
+                    </div>
+                                        <div id="t23" class="main_title" style="display: none;">
+                            贵州省
+                    </div>
+                                        <div id="t24" class="main_title" style="display: none;">
+                            云南省
+                    </div>
+                                        <div id="t25" class="main_title" style="display: none;">
+                            陕西省
+                    </div>
+                                        <div id="t26" class="main_title" style="display: none;">
+                            甘肃省
+                    </div>
+                                        <div id="t27" class="main_title" style="display: none;">
+                            青海省
+                    </div>
+                                        <div id="t28" class="main_title" style="display: none;">
+                            宁夏回族自治区
+                    </div>
+                                        <div id="t29" class="main_title" style="display: none;">
+                            新疆维吾尔自治区
+                    </div>
+                                        <div id="t30" class="main_title" style="display: none;">
+                            西藏自治区
+                    </div>
+                                        <div id="t31" class="main_title" style="display: none;">
+                            台湾省
+                    </div>
+                    <h1 id="ln31" style="display: none;text-align: center;line-height: 260px;color: #ffffff;">暂无数据</h1>
+                    <h1 id="ln30" style="display: none;text-align: center;line-height: 260px;color: #ffffff;">暂无数据</h1>
+                    <div id="ln0" class="visual_con" style="width:100%;height: 280px;">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>0.99</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.843</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>1.1%</p>
+                                </div>
+                            </div>
+                            <!-- <div class="clear"></div> -->
+                            <div class="visual_conTop2" style="clear: both;margin-top: 2px;">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=3.6959+2.1905lnPs+0.235lnIs+0.408lnT-0.0167lnA+1.5028lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln1" class="visual_con" style="width:100%;height: 280px;display: none;">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>0.98</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.89</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>1.05%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=-7.2463-0.2698lnPs-0.6786lnIs+1.3773lnT+1.2748lnA+0.9463lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln2" class="visual_con" style="width:100%;height: 280px;display: none;">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1.01</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.778</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>2.09%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=-40.1177-1.3148lnPs+0.0553lnIs+0.4337lnT+0.7282lnA+5.299lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln3" class="visual_con" style="width:100%;height: 280px; display: none;">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1.03</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.738</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>3.02%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=107.7298+10.403lnPs+1.4645lnIs-2.781lnT-2.7066lnA-6.52lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln4" class="visual_con" style="width:100%;height: 280px;display: none;">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.992</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.28%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=-47.7809+1.5529lnPs-0.1629lnIs+1.343lnT+0.881lnA+6.8587lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln5" class="visual_con" style="width:100%;height: 280px;display: none;">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>0.98</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.887</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>1.06%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=24.6695+1.2073lnPs+0.3841lnIs+0.7006lnT+0.655lnA-1.8738lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln6" class="visual_con" style="width:100%;height: 280px;display: none;">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>0.98</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.987</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>1.46%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=2.1041-3.333lnPs-0.2942lnIs+0.6798lnT+1.0769lnA-0.1228lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln7" class="visual_con" style="width:100%;height: 280px;display: none;">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>0.98</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.957</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>1.28%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=-9.8481-3.4097lnPs-0.3987lnIs+1.2111lnT+1.5289lnA+0.8123lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln8" class="visual_con" style="width:100%;height: 280px;display: none;">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>0.96</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.903</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.09%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=-11.0199-0.7659lnPs+0.1485lnIs+1.378lnT+1.2198lnA+1.5525lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln9" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>0.97</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.97</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.01%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=7.2681+0.5553lnPs+0.2911lnIs+0.8711lnT+0.8727lnA-0.0424lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln10" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>0.98</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.895</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>1.02%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=11.6944+1.1308lnPs-0.1744lnIs+0.9209lnT+1.0426lnA-0.812lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln11" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.892</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>1.09%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=-5.3978-0.4436lnPs+0.0372lnIs+1.3444lnT+1.3741lnA+0.7302lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln12" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1.01</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.99</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.01%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=0.497-0.5731lnPs+0.1092lnIs+0.8459lnT+1.1539lnA+0.2244lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln13" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.97</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.02%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=9.3618+0.4364lnPs+0.2179lnIs+0.7683lnT+0.7882lnA-0.2802lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln14" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.992</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.06%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=-26.5626-1.4457lnPs-0.7912lnIs+1.1606lnT+0.9274lnA+3.3922lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln15" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1.05</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.894</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.97%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=56.224+-2.3446lnPs-0.3478lnIs+0.2814lnT+1.553lnA-6.4304lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="ln16" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1.05</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.987</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.05%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=65.5051+1.8046lnPs-0.9253lnIs+1.5915lnT+12737.0lnA-7.2736lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="ln17" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1.01</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.987</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.1%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=-1.1136+1.276lnPs+0.9772lnIs+0.9037lnT+0.6537lnA+1.288lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="ln18" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1.03</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.997</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.02%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=-19.7973-1.154lnPs+0.3053lnIs+1.1314lnT+1.0865lnA+2.5879lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="ln19" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1.01</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.997</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.06%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=-9.3827-0.2589lnPs+0.2936lnIs+1.0228lnT+1.1767lnA+1.445lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln20" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>9.69</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.998</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.13%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=6.7516+0.8163lnPs+0.9756lnIs+0.9628lnT+1.4789lnA-1.0075lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln21" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1.01</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.99</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.09%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=40.0622-0.3302lnPs-0.0315lnIs+0.7036lnT+1.2569lnA-4.8653lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln22" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>10.01</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.921</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.39%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=34.5239+0.3008lnPs+0.6267lnIs+0.3652lnT+0.4778lnA-2.6268lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln23" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>10.01</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.967</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.42%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=18.9238+0.6399lnPs+2.4956lnIs+0.2238lnT+0.5404lnA-0.8002lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln24" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1.01</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.867</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>1.4%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=-285.3672+2.2242lnPs+0.35449lnIs+0.4113lnT-1.0797lnA+37.1066lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+<!--                    <div id="ln25" class="visual_con" style="width:100%;height: 280px;display: none">-->
+<!--                        <div class="visual_conTop">-->
+<!--                            <div class="visual_conTop1" style="margin-bottom: 0;">-->
+<!--                                <div>-->
+<!--                                    <h1>K值</h1>-->
+<!--                                    <p>1</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="visual_conTop1">-->
+<!--                                <div>-->
+<!--                                    <h1>R<sup>2</sup></h1>-->
+<!--                                    <p>0.959</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="visual_conTop1">-->
+<!--                                <div>-->
+<!--                                    <h1>误差</h1>-->
+<!--                                    <p>1.31%</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="clear"></div>-->
+<!--                            <div class="visual_conTop2">-->
+
+<!--                                <div>-->
+<!--                                    <h1>计算公式</h1>-->
+<!--                                    <p>lnIs=-6.037-0.832lnPs-2.5342lnIs-0.0305lnT+1.6043lnA+0.156lnP</p>-->
+
+<!--                                </div>-->
+
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+                    <div id="ln25" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>9.5</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.988</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.07%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=-44.7255-0.4564lnPs+1.2035lnIs+0.3813lnT+0.4121lnA+6.6905lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln26" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1.08</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.955</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.76%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=-123.6081-9.0823lnPs-1.8829lnIs-1.3135lnT+2.6361lnA+12.894lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln27" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.977</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.62%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=-71.0905-3.0766lnPs+2.4155lnIs-0.1988lnT+0.7589lnA+12.2517lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln28" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1.01</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.977</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.07%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=-44.5151-2.5945lnPs-1.0296lnIs+0.202lnT+0.601lnA+7.7794lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ln29" class="visual_con" style="width:100%;height: 280px;display: none">
+                        <div class="visual_conTop">
+                            <div class="visual_conTop1" style="margin-bottom: 0;">
+                                <div>
+                                    <h1>K值</h1>
+                                    <p>1.05</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>R<sup>2</sup></h1>
+                                    <p>0.995</p>
+                                </div>
+                            </div>
+                            <div class="visual_conTop1">
+                                <div>
+                                    <h1>误差</h1>
+                                    <p>0.12%</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="visual_conTop2">
+
+                                <div>
+                                    <h1>计算公式</h1>
+                                    <p>lnIs=4.8987+1.1033lnPs+0.3286lnIs+0.9206lnT+0.8548lnA+0.2216lnP</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+                <div class="right_2">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        <!-- <img src="img/t_5.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                        符号说明
+                    </div>
+                    <!-- <div id="chart_4" class="echart fl t_btn4" style="width:100%;height: 280px;cursor: pointer;"></div> -->
+                    <table class="table table-kingdargen"
+                        style="width:100%;height: 280px;cursor: pointer;padding-top: 2%;">
+                        <thead>
+                            <tr>
+                                <th>变量</th>
+                                <th>符号</th>
+                                <th>含义</th>
+                                <th>单位</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>碳排放量</td>
+                                <td>I</td>
+                                <td>能源消费产生的碳排放量</td>
+                                <td>万吨</td>
+                            </tr>
+                            <tr>
+                                <td>人口规模</td>
+                                <td>P</td>
+                                <td>总人口数</td>
+                                <td>万人</td>
+                            </tr>
+                            <tr>
+                                <td>人均ＧＤＰ</td>
+                                <td>A</td>
+                                <td>人均ＧＤＰ</td>
+                                <td>元</td>
+                            </tr>
+                            <tr>
+                                <td>能源强度</td>
+                                <td>T</td>
+                                <td>能源消费总量／ＧＤＰ</td>
+                                <td>吨标煤／万元</td>
+                            </tr>
+                            <tr>
+                                <td>城镇化率</td>
+                                <td>Ps</td>
+                                <td>城镇化率</td>
+                                <td>%</td>
+                            </tr>
+                            <tr>
+                                <td>第二产业占比</td>
+                                <td>Is</td>
+                                <td>第二产业占ＧＤＰ比重</td>
+                                <td>%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>

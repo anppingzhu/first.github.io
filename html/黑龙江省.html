@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>因素分析</title>
+    <link rel="stylesheet" href="./css/head.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/fontscroll.js"></script>
+    <script type="text/javascript" src="../js/js.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://www.jq22.com/jquery/font-awesome.4.7.0.css">
+    <script>
+
+        $(document).ready(function () {
+            var whei = $(window).width()
+            $("html").css({ fontSize: whei / 22 });
+            $(window).resize(function () {
+                var whei = $(window).width();
+                $("html").css({ fontSize: whei / 22 })
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="data">
+    <!--  标题  -->
+<!--    <div class="loading">-->
+<!--        <div class="loadbox"> <img src="../images/loading.gif">-->
+<!--            <h1>loading</h1>-->
+<!--        </div>-->
+<!--  </div>-->
+
+    <div class="header">
+        <div class="header-center fl">
+            <div class="header-title" style="padding-top: 1%; display: block;">
+                黑龙江省因素分析
+            </div>
+
+            <div class="header-img"></div>
+        </div>
+    </div>
+
+    <!-- 导航   -->
+    <div class="tab">
+        <div class="fr nav">
+            <ul id="nav" class="navbar_nav btn-list">
+                <li>
+                    <a class="first- btn-float blue" href="javascript:void(0)">
+                        <i id="first" class="fa fa-arrow-circle-left "
+                           style="font-size: 40px; color: #BD8E3E; text-align: center; padding-top: 10%;
+                                padding-left: 5%;"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="second" href="javascript:void(0)">
+                        <i id="second" class="fa fa-home"
+                           style="font-size: 40px; color:#BD8E3E; text-align: center; padding-top: 10%;
+                                padding-left: 10%;"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="three" href="javascript:void(0)">
+                        	<i id="three" class="fa fa-arrow-circle-right"
+                            style="font-size: 40px; color:#BD8E3E; text-align: center; padding-top: 10%;
+                                padding-left: 30%;"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 主页面   -->
+    <!-- 页面一    -->
+    <div id="page1" class="main" style="display: block;">
+        <div class="main_1" >
+            <iframe frameborder="0" src="../second/界面一/html/黑龙江省1.html" width="100%" height="100%" scrolling="no"></iframe>
+        </div>
+
+    </div>
+    <!-- 页面二   -->
+    <div id="page2" class="main" style="display: none;">
+        <div id="page2_1" class="main_2">
+            <iframe frameborder="0" src="../second/界面二/html/黑龙江省2.html" width="100%" height="100%" scrolling="no"></iframe>
+        </div>
+    </div>
+    <!-- 页面三   -->
+<!--    <div id="page3" class="main" style="display: none;">-->
+<!--        <div class="main_3">-->
+<!--            <iframe frameborder="0" src="" width="100%" height="100%" scrolling="no"></iframe>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+</div>
+
+
+<script>
+
+
+
+        var lis=document.querySelector('ul').querySelectorAll('li a i');
+        //获取三个要切换的盒子
+        let page1 = document.getElementById('page1')
+        let page2 = document.getElementById('page2')
+        //点击导航栏，改变Iframe的src属性，实现页面切换
+        for (let i = 0; i < lis.length; i++) {
+            //绑定点击事件
+            lis[i].onclick = function(event){
+                if(event.target.classList.contains('fa-arrow-circle-left')){
+                    changPage()
+                    page1.style.display = 'block'
+                }else if(event.target.classList.contains('fa-arrow-circle-right')){
+                    changPage()
+                    page2.style.display = 'block'
+                }
+                else{
+                    window.open("about:blank","_self").close();
+                }
+            }
+
+        }
+        //封装一个排他思想的函数
+        function changPage(){
+            //获取所有page
+            document.querySelectorAll('.main').forEach(el=>{
+                el.style.display = 'none'
+            })
+        }
+
+
+
+
+
+</script>
+</body>
+</html>
